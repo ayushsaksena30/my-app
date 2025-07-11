@@ -47,6 +47,16 @@
 				<img src="/images/icons/linkedin.svg" alt="LinkedIn" class="w-4 h-4" />
 				<span class="text-sm">LinkedIn</span>
 			</a>
+
+			<a 
+				href="http://discordapp.com/users/westernxyz" 
+				target="_blank" 
+				rel="noopener noreferrer"
+				class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors"
+			>
+				<img src="/images/icons/discord.svg" alt="Discord" class="w-4 h-4" />
+				<span class="text-sm">Discord</span>
+			</a>
 		</div>
 	</div>
 
@@ -55,6 +65,7 @@
 		<nav class="space-y-2">
 			<a href="#about" class="block text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">About</a>
 			<a href="#experience" class="block text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Experience</a>
+			<a href="#tech-stack" class="block text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Tech Stack</a>
 			<a href="#projects" class="block text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Projects</a>
 			<a href="#resume" class="block text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Resume</a>
 			<a href="#contact" class="block text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Contact</a>

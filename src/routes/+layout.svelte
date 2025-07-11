@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
 	import LeftPanel from '../lib/components/LeftPanel.svelte';
+	import RightPanel from '../lib/components/RightPanel.svelte';
 </script>
 
 <svelte:head>
@@ -14,7 +15,8 @@
 			<LeftPanel />
 		</div>
 
-		<div class="w-2/3 ml-1/3">
+		<div class="w-2/3 ml-auto">
+			<RightPanel />
 		</div>
 	</div>
 </div>
