@@ -7,6 +7,7 @@
 <svelte:head>
 	<title>Ayush Saksena</title>
 	<meta name="description" content="Personal website showcasing experience, projects, and skills" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50">
@@ -15,8 +16,9 @@
 			<LeftPanel />
 		</div>
 
-		<div class="w-2/3 ml-auto">
+		<div class="w-2/3 ml-auto overflow-y-auto overflow-x-hidden">
 			<RightPanel />
 		</div>
 	</div>
+	<slot />
 </div>
