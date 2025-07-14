@@ -1,5 +1,18 @@
 <script>
   import TechStackItem from './TechStackItem.svelte';
+
+  function viewResume() {
+    window.open('https://drive.google.com/file/d/1Xx-mq0_zkjb7-wB1dcTh0oK-IUbZqIsV/view?usp=sharing', '_blank');
+  }
+
+  function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/uc?export=download&id=1Xx-mq0_zkjb7-wB1dcTh0oK-IUbZqIsV';
+    link.download = 'Ayush_Saksena_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 </script>
 
 <div class="mt-32"></div>
@@ -127,6 +140,7 @@
     <TechStackItem imgPath="/images/lang/tensorflow.svg" name="TensorFlow" />
     <TechStackItem imgPath="/images/lang/xgb.png" name="XG Boost" />
     <TechStackItem imgPath="/images/lang/opencv.png" name="OpenCV" />
+    <TechStackItem imgPath="/images/lang/yolo.png" name="YOLO" />
     <TechStackItem imgPath="/images/lang/seaborn.png" name="Seaborn" />
     <TechStackItem imgPath="/images/lang/matplotlib.png" name="Matplotlib" />
 
@@ -163,6 +177,18 @@
   <h2 class="text-2xl font-bold">
     Resume
   </h2>
+  <div class="flex items-center gap-4 ml-14 mt-8">
+    <button 
+      on:click={viewResume}
+      class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors font-medium min-w-[100px]">
+      View
+    </button>
+    <button 
+      on:click={downloadResume}
+      class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-50 transition-colors font-medium min-w-[100px]">
+      Download
+    </button>
+  </div>
 </div>
 
 <div id="contact" class="mt-8 mb-8 ml-8 text-left">
