@@ -3,7 +3,7 @@
 </script>
 
 <div class="mt-32"></div>
-<div class="mt-4 mb-8 ml-8 text-left">
+<div id="about" class="mt-4 mb-8 ml-8 text-left">
   <h2 class="text-2xl font-bold">
     About
   </h2>
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<div class="mt-8 mb-8 ml-8 text-left">
+<div id="experience" class="mt-8 mb-8 ml-8 text-left">
   <h2 class="text-2xl font-bold">
     Experience
   </h2>
@@ -98,7 +98,7 @@
   </h3>
 </div>
 
-<div class="mt-8 mb-8 ml-8 text-left">
+<div id="tech-stack" class="mt-8 mb-8 ml-8 text-left">
   <h2 class="text-2xl font-bold">
     Tech Stack
   </h2>
@@ -153,20 +153,20 @@
   </div>
 </div>
 
-<div class="mt-8 mb-8 ml-8 text-left">
+<div id="projects" class="mt-8 mb-8 ml-8 text-left">
   <h2 class="text-2xl font-bold">
     Projects
   </h2>
 </div>
 
-<div class="mt-8 mb-8 ml-8 text-left">
+<div id="resume" class="mt-8 mb-8 ml-8 text-left">
   <h2 class="text-2xl font-bold">
     Resume
   </h2>
 </div>
 
-<div class="mt-8 mb-8 ml-8 text-left">
+<div id="contact" class="mt-8 mb-8 ml-8 text-left">
   <h2 class="text-2xl font-bold">
-    Resume
+    Contact
   </h2>
 </div>
