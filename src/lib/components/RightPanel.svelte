@@ -14,6 +14,17 @@
     link.click();
     document.body.removeChild(link);
   }
+
+  let name = '';
+  let email = '';
+  let message = '';
+
+  function sendEmail() {
+    const subject = `Contact from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:asaksena100@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, '_blank');
+  }
 </script>
 
 <div class="mt-32"></div>
@@ -234,4 +245,50 @@
   <h2 class="text-2xl font-bold">
     Contact
   </h2>
+  <div class="ml-14 mt-8 max-w-md">
+    <form on:submit|preventDefault={sendEmail} class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+        <input
+          type="text"
+          id="name"
+          bind:value={name}
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Your name"
+        />
+      </div>
+      
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input
+          type="email"
+          id="email"
+          bind:value={email}
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="your.email@example.com"
+        />
+      </div>
+      
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea
+          id="message"
+          bind:value={message}
+          required
+          rows="4"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
+          placeholder="Your message..."
+        ></textarea>
+      </div>
+      
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors font-medium"
+      >
+        Send Email
+      </button>
+    </form>
+  </div>
 </div>
