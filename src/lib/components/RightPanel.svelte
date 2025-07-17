@@ -1,4 +1,5 @@
 <script>
+	import ProjectItem from './ProjectItem.svelte';
   import TechStackItem from './TechStackItem.svelte';
 
   function viewResume() {
@@ -109,6 +110,44 @@
       </div>
     </div>
   </h3>
+
+  <h3 class="text-gray-700 text-md mt-16">
+    <div class="flex items-center gap-2">
+      <img src="/images/icons/sae.png" alt="BSOC'25" class="w-12 h-12" />
+      <div class="flex items-center justify-between w-full">
+        <a 
+        href="https://saeindia.org/jbframework/uploads/2024/11/AeroTHON-2024-Phase2.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-xl font-bold underline">
+          Aerothon 2024
+        </a>
+        <span class="text-md text-gray-700 whitespace-nowrap mr-32">Jan 2024 - Nov 2024</span>
+      </div>
+    </div>
+    <div class="flex flex-col items-start gap-2">
+      <span class="text-md font-bold ml-14">AI/ML Lead @ Air Guardians</span>
+      <p class="text-gray-700 text-md ml-14">
+        Prepared Algorithm for asynchronous autonomous drone traversal and object detection.
+      </p>
+      <span class="text-md font-bold ml-14">Tech Stack-</span>
+      <div class="flex flex-wrap items-center gap-3 ml-14 mt-2">
+        <TechStackItem imgPath="/images/lang/python.svg" name="Python" />
+        <TechStackItem imgPath="/images/lang/opencv.png" name="OpenCV" />
+        <TechStackItem imgPath="/images/lang/yolo.png" name="YOLO" />
+        <TechStackItem imgPath="/images/tools/ubuntu.png" name="Ubuntu" />
+      </div>
+      <span class="text-md font-bold ml-14">Work-</span>
+      <div class="text-gray-700 text-md ml-14">
+        <ul class="list-disc ml-6 mr-32">
+          <li>Developed and deployed a real-time YOLOv4-Tiny object detection system for UAVs, optimized to run at 20 FPS on onboard hardware.</li>
+          <li>Implemented shape detection with automatic snapshots, GPS tagging, and timestamps.</li>
+          <li>Designed a dual-mode traversal system supporting manual (keyboard) and autonomous flight for enhanced flexibility.</li>
+          <li>Deployed the system on Raspberry Pi 5 with a Waveshare OV5640 camera, Pixhawk 2.4.8, and GPS module, enabling fully onboard computation without cloud dependency..</li>
+        </ul>
+      </div>
+    </div>
+  </h3>
 </div>
 
 <div id="tech-stack" class="mt-8 mb-8 ml-8 text-left">
@@ -152,7 +191,6 @@
     <TechStackItem imgPath="/images/lang/next-js.svg" name="Next.js" />
     <TechStackItem imgPath="/images/lang/tailwind.png" name="Tailwind CSS" />
     <TechStackItem imgPath="/images/lang/vite.svg" name="Vite" />
-    <TechStackItem imgPath="/images/lang/turbopack.png" name="Turbopack" />
     <TechStackItem imgPath="/images/lang/html.svg" name="HTML" />
     <TechStackItem imgPath="/images/lang/css.svg" name="CSS" />
   </div>
@@ -161,6 +199,7 @@
     <TechStackItem imgPath="/images/tools/vscode.svg" name="VS Code" />
     <TechStackItem imgPath="/images/tools/studio.png" name="Android Studio" />
     <TechStackItem imgPath="/images/tools/cursor.png" name="Cursor" />
+    <TechStackItem imgPath="/images/tools/ubuntu.png" name="Ubuntu" />
     <TechStackItem imgPath="/images/tools/git.svg" name="Git" />
     <TechStackItem imgPath="/images/tools/github.svg" name="Github" />
     <TechStackItem imgPath="/images/tools/figma.svg" name="Figma" />
