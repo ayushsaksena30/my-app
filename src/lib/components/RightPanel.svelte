@@ -325,7 +325,7 @@
         ]}
         links={[
           {url: "http://github.com/ayushsaksena30/my-app", label: "GitHub", icon: "/images/tools/github.svg"},
-          {url: "https://ayushsaksena30.github.io/my-app/", label: "Vercel", icon: "/images/tools/vercel.svg"}
+          {url: "https://ayush-saksena.vercel.app", label: "Vercel", icon: "/images/tools/vercel.svg"}
         ]}
         status="in progress"
       />
