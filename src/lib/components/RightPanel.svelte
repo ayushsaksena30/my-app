@@ -161,7 +161,7 @@
   </h3>
 </div>
 
-<div id="tech-stack" class="mt-8 mb-8 ml-8 text-left">
+<div id="tech-stack" class="mt-8 mb-8 ml-8 text-left mr-16">
   <h2 class="text-2xl font-bold">
     Tech Stack
   </h2>
@@ -217,10 +217,158 @@
   </div>
 </div>
 
-<div id="projects" class="mt-8 mb-8 ml-8 text-left">
+<div id="projects" class="mt-8 mb-8 ml-8 text-left mr-16">
   <h2 class="text-2xl font-bold">
     Projects
   </h2>
+  
+  <div class="ml-14 mt-8 mr-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <ProjectItem 
+        title="Mood Predictor"
+        subheading="AI application to predict your mood and recommend personalized music."
+        features={[
+          "Deployed an AI-driven music recommendation app that predicts mood via chat, image analysis, or a test and recommends personalized music.",
+          "Handled 2000+ API requests during its first week of launch with seamless integration for Apple Music, Spotify, and YouTube Music.",
+          "Published on Play Store, Amazon App Store and Uptodown. Rated 5 stars and over 100+ Global Downloads."
+        ]}
+        techStack={[
+          {imgPath: "/images/lang/kotlin.png", name: "Kotlin"},
+          {imgPath: "/images/lang/xml.svg", name: "XML"},
+          {imgPath: "/images/icons/gemini.png", name: "Gemini"},
+          {imgPath: "/images/tools/studio.png", name: "Android Studio"}
+        ]}
+        links={[
+          {url: "https://github.com/ayushsaksena30/Mood-Predictor-App", label: "GitHub", icon: "/images/tools/github.svg"},
+          {url: "https://play.google.com/store/apps/details?id=com.saksena.moodpredictorapp&hl=en_IN", label: "Play Store", icon: "/images/tools/store.svg"},
+          {url: "https://mood-predictor.en.uptodown.com/android", label: "Uptodown", icon: "/images/tools/uptodown.svg"}
+        ]}
+        status="completed"
+      />
+
+      <ProjectItem 
+        title="AutoNav-detect"
+        subheading="Autonomous traversal and object detection for UAVs using computer vision"
+        features={[
+          "Real-time object detection (Circle, Target, Triangle, Square) and snapshot capture on UAVs.",
+          "Optimized YOLOv4-Tiny model achieving 20 FPS, running entirely on the UAV's on-board computer.",
+          "Supports both manual (keyboard-based) and autonomous drone traversal."
+        ]}
+        techStack={[
+          {imgPath: "/images/lang/python.svg", name: "Python"},
+          {imgPath: "/images/lang/opencv.png", name: "OpenCV"},
+          {imgPath: "/images/lang/yolo.png", name: "YOLO"},
+          {imgPath: "/images/tools/ubuntu.png", name: "Ubuntu"},
+        ]}
+        links={[
+          {url: "https://github.com/ayushsaksena30/AutoNav-Detect", label: "GitHub", icon: "/images/tools/github.svg"}
+        ]}
+        status="completed"
+      />
+
+      <ProjectItem 
+        title="Smart Hybrid Delivery"
+        subheading="Hybrid drone delivery path planning system"
+        features={[
+          "Optimizes last-mile delivery routes using a combination of Electric Vehicles (EVs) and drones.",
+          "Aims to reduce carbon emissions and calculates delivery efficiency in real-time.",
+          "Built with a React, Vite, Tailwind CSS frontend and a Node.js, Express, MongoDB backend."        ]}
+        techStack={[
+          {imgPath: "/images/lang/react.svg", name: "React"},
+          {imgPath: "/images/lang/tailwind.png", name: "Tailwind CSS"},
+          {imgPath: "/images/lang/nodejs.svg", name: "Node.js"},
+          {imgPath: "/images/lang/numpy.svg", name: "Numpy"},
+          {imgPath: "/images/lang/pandas.svg", name: "Pandas"},
+          {imgPath: "/images/lang/scikit-learn.png", name: "Scikit-Learn"}
+        ]}
+        links={[
+          {url: "https://github.com/ayushsaksena30/hybrid-drone-ev", label: "GitHub", icon: "/images/tools/github.svg"},
+          {url: "https://www.youtube.com/watch?v=qvc7_PmT1xs", label: "YouTube", icon: "/images/icons/youtube.svg"}
+        ]}
+        status="completed"
+      />
+
+      <ProjectItem 
+        title="NotifyMe"
+        subheading="Cross Platform app for call and SMS notification forwarding."
+        features={[
+          "Automated bug detection and security vulnerability scanning",
+          "Code style and best practices suggestions",
+          "Integration with GitHub and GitLab",
+          "Custom rule configuration for teams"
+        ]}
+        techStack={[
+          {imgPath: "/images/lang/kotlin.png", name: "Kotlin"},
+          {imgPath: "/images/lang/compose.png", name: "Jetpack Compose"},
+          {imgPath: "/images/lang/flutter.svg", name: "Flutter"},
+          {imgPath: "/images/tools/studio.png", name: "Android Studio"},
+        ]}
+        links={[
+          {url: "http://github.com/ayushsaksena30/NotifyMe/", label: "GitHub", icon: "/images/tools/github.svg"}
+        ]}
+        status="in progress"
+      />
+
+      <ProjectItem 
+        title="Portfolio Website"
+        subheading="This website you are currently viewing."
+        features={[
+          "Responsive, modern UI built with Svelte and Tailwind CSS.",
+          "Showcases projects, skills, and resume with interactive elements.",
+          "Deployed on Vercel with continuous integration from GitHub."
+        ]}
+        techStack={[
+          {imgPath: "/images/lang/svelte.svg", name: "Svelte"},
+          {imgPath: "/images/lang/tailwind.png", name: "Tailwind CSS"},
+          {imgPath: "/images/lang/vite.svg", name: "Vite"},
+          {imgPath: "/images/tools/github.svg", name: "GitHub"}
+        ]}
+        links={[
+          {url: "http://github.com/ayushsaksena30/my-app", label: "GitHub", icon: "/images/tools/github.svg"},
+          {url: "https://ayushsaksena30.github.io/my-app/", label: "Vercel", icon: "/images/tools/vercel.svg"}
+        ]}
+        status="in progress"
+      />
+
+      <ProjectItem 
+        title="Headline-Hub"
+        subheading="News application providing personalized global headlines."
+        features={[
+          "Facilitates control of ESP32 hardware from an HTML client via a relay server.",
+          "Features an intuitive bottom navigation bar for seamless user experience.",
+          "Integrates with the GNews API for up-to-date news, built with multi-fragment architecture and RecyclerView."
+        ]}
+        techStack={[
+        {imgPath: "/images/lang/kotlin.png", name: "Kotlin"},
+        {imgPath: "/images/lang/xml.svg", name: "XML"},
+        {imgPath: "/images/tools/studio.png", name: "Android Studio"}
+        ]}
+        links={[
+          {url: "https://github.com/ayushsaksena30/Headline-Hub", label: "GitHub", icon: "/images/tools/github.svg"},
+        ]}
+        status="completed"
+      />
+
+      <ProjectItem 
+        title="Smart Warehouse System"
+        subheading="Web-controlled ESP32 system for smart warehouses."
+        features={[
+          "Facilitates control of ESP32 hardware from an HTML client via a relay server.",
+          "Employs a WebSocket communication protocol for real-time interaction between devices.",
+          "Provides clear setup instructions for IP configuration, server setup, and ESP32 flashing."
+        ]}
+        techStack={[
+          {imgPath: "/images/lang/python.svg", name: "Python"},
+          {imgPath: "/images/tools/github.svg", name: "GitHub API"}
+        ]}
+        links={[
+          {url: "http://github.com/tanishkaa08/Smart-Warehouse-system/", label: "GitHub", icon: "/images/tools/github.svg"},
+        ]}
+        status="completed"
+      />
+
+    </div>
+  </div>
 </div>
 
 <div id="resume" class="mt-8 mb-8 ml-8 text-left">
@@ -230,12 +378,14 @@
   <div class="flex items-center gap-4 ml-14 mt-8">
     <button 
       on:click={viewResume}
-      class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors font-medium min-w-[100px]">
+      class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors border border-gray-300 hover:border-gray-400 font-medium min-w-[100px]">
+      <img src="/images/icons/view.svg" alt="View" class="w-4 h-4" />
       View
     </button>
     <button 
       on:click={downloadResume}
-      class="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-50 transition-colors font-medium min-w-[100px]">
+      class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors border border-gray-300 hover:border-gray-400 font-medium min-w-[100px]">
+      <img src="/images/icons/download.svg" alt="Download" class="w-4 h-4" />
       Download
     </button>
   </div>
