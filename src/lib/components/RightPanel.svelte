@@ -70,6 +70,7 @@
         <TechStackItem imgPath="/images/lang/rust.svg" name="Rust" />
         <TechStackItem imgPath="/images/lang/js.png" name="JavaScript" />
         <TechStackItem imgPath="/images/lang/wasm.svg" name="Web Assembly" />
+        <TechStackItem imgPath="/images/lang/go.png" name="Go" />
         <TechStackItem imgPath="/images/tools/git.svg" name="Git" />
       </div>
       <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Work-</span>
@@ -215,6 +216,7 @@
     <TechStackItem imgPath="/images/lang/rust.svg" name="Rust" />
     <TechStackItem imgPath="/images/lang/tokio.png" name="Tokio" />
     <TechStackItem imgPath="/images/lang/js.png" name="JavaScript" />
+    <TechStackItem imgPath="/images/lang/go.png" name="Go" />
     <TechStackItem imgPath="/images/lang/wasm.svg" name="Web Assembly" />
   </div>
   <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">AI/ML</h3>
