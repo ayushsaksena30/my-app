@@ -27,24 +27,60 @@
   }
 </script>
 
-<div class="mt-32"></div>
-<div id="about" class="mt-4 mb-8 ml-8 text-left">
+<div class="mt-16 md:mt-32"></div>
+<div id="about" class="mt-4 mb-8 ml-4 md:ml-8 text-left px-4 md:px-0">
   <h2 class="text-2xl font-bold">
     About
   </h2>
 
   <div class="flex items-center gap-2 mt-4">
-    <img src="/images/icons/iiitdmj.jpg" alt="IIITDM Jabalpur" class="w-12 h-12 self-center" />
-    <p class="text-gray-700 text-md">
+    <img src="/images/icons/iiitdmj.jpg" alt="IIITDM Jabalpur" class="w-10 h-10 md:w-12 md:h-12 self-center flex-shrink-0" />
+    <p class="text-gray-700 text-sm md:text-md">
       I am Pre-Final year student at Indian Institute of Information Technology, Jabalpur.
     </p>
   </div>
 </div>
 
-<div id="experience" class="mt-8 mb-8 ml-8 text-left">
+<div id="experience" class="mt-8 mb-8 ml-4 md:ml-8 text-left px-4 md:px-0">
   <h2 class="text-2xl font-bold">
     Experience
   </h2>
+
+  <h3 class="text-gray-700 text-md mt-8">
+    <div class="flex items-center gap-2">
+      <img src="/images/icons/breez-icon.png" alt="Breez" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+        <a 
+        href="https://www.linkedin.com/posts/ayush-saksena_breez-summerofbitcoin-blockchain-ugcPost-7375751669294243840-Iifx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEzFHGkBL45ca6XkhwvFCQqOLf839HaGHGU" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-lg md:text-xl font-bold underline">
+          Breez
+        </a>
+        <span class="text-md text-gray-700 whitespace-nowrap mr-32">Sept 2025 - Present</span>
+      </div>
+    </div>
+    <div class="flex flex-col items-start gap-2 mt-4">
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Rust Developer Intern</span>
+      <p class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
+        Worked on NWC Feature integration in the Breez SDK. 
+      </p>
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Tech Stack-</span>
+      <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
+        <TechStackItem imgPath="/images/lang/rust.svg" name="Rust" />
+        <TechStackItem imgPath="/images/lang/js.png" name="JavaScript" />
+        <TechStackItem imgPath="/images/lang/wasm.svg" name="Web Assembly" />
+        <TechStackItem imgPath="/images/tools/git.svg" name="Git" />
+      </div>
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Work-</span>
+      <div class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
+        <ul class="list-disc ml-4 md:ml-6">
+          <li>Working on the Breez SDK.</li>
+        </ul>
+      </div>
+    </div>
+
+  </h3>
 
   <h3 class="text-gray-700 text-md mt-8">
     <div class="flex items-center gap-2">
@@ -57,7 +93,7 @@
         class="text-xl font-bold underline">
           Summer of Bitcoin 2025
         </a>
-        <span class="text-md text-gray-700 whitespace-nowrap mr-32">May 2025 - Present</span>
+        <span class="text-md text-gray-700 whitespace-nowrap mr-32">May 2025 - Aug 2025</span>
       </div>
     </div>
     <div class="flex flex-col items-start gap-2">
@@ -161,12 +197,12 @@
   </h3>
 </div>
 
-<div id="tech-stack" class="mt-8 mb-8 ml-8 text-left mr-16">
+<div id="tech-stack" class="mt-8 mb-8 ml-4 md:ml-8 text-left mr-4 md:mr-16 px-4 md:px-0">
   <h2 class="text-2xl font-bold">
     Tech Stack
   </h2>
-  <h3 class="text-md font-bold ml-14 mt-8">App Development</h3>
-  <div class="flex flex-wrap items-center gap-3 ml-14 mt-2">
+  <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">App Development</h3>
+  <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
     <TechStackItem imgPath="/images/lang/kotlin.png" name="Kotlin" />
     <TechStackItem imgPath="/images/lang/java.svg" name="Java" />
     <TechStackItem imgPath="/images/lang/flutter.svg" name="Flutter" />
@@ -174,15 +210,15 @@
     <TechStackItem imgPath="/images/lang/xml.svg" name="XML" />
     <TechStackItem imgPath="/images/tools/firebase.svg" name="Firebase" />
   </div>
-  <h3 class="text-md font-bold ml-14 mt-8">Blockchain Development</h3>
-  <div class="flex flex-wrap items-center gap-3 ml-14 mt-2">
+  <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">Blockchain Development</h3>
+  <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
     <TechStackItem imgPath="/images/lang/rust.svg" name="Rust" />
     <TechStackItem imgPath="/images/lang/tokio.png" name="Tokio" />
     <TechStackItem imgPath="/images/lang/js.png" name="JavaScript" />
     <TechStackItem imgPath="/images/lang/wasm.svg" name="Web Assembly" />
   </div>
-  <h3 class="text-md font-bold ml-14 mt-8">AI/ML</h3>
-  <div class="flex flex-wrap items-center gap-3 ml-14 mt-2">
+  <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">AI/ML</h3>
+  <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
     <TechStackItem imgPath="/images/lang/python.svg" name="Python" />
     <TechStackItem imgPath="/images/lang/pandas.svg" name="Pandas" />
     <TechStackItem imgPath="/images/lang/numpy.svg" name="Numpy" />
@@ -195,8 +231,8 @@
     <TechStackItem imgPath="/images/lang/matplotlib.png" name="Matplotlib" />
 
   </div>
-  <h3 class="text-md font-bold ml-14 mt-8">Web Development</h3>
-  <div class="flex flex-wrap items-center gap-3 ml-14 mt-2">
+  <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">Web Development</h3>
+  <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
     <TechStackItem imgPath="/images/lang/react.svg" name="React" />
     <TechStackItem imgPath="/images/lang/svelte.svg" name="Svelte" />
     <TechStackItem imgPath="/images/lang/next-js.svg" name="Next.js" />
@@ -205,8 +241,8 @@
     <TechStackItem imgPath="/images/lang/html.svg" name="HTML" />
     <TechStackItem imgPath="/images/lang/css.svg" name="CSS" />
   </div>
-  <h3 class="text-md font-bold ml-14 mt-8">Development Tools</h3>
-  <div class="flex flex-wrap items-center gap-3 ml-14 mt-2">
+  <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">Development Tools</h3>
+  <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
     <TechStackItem imgPath="/images/tools/vscode.svg" name="VS Code" />
     <TechStackItem imgPath="/images/tools/studio.png" name="Android Studio" />
     <TechStackItem imgPath="/images/tools/cursor.png" name="Cursor" />
@@ -217,13 +253,13 @@
   </div>
 </div>
 
-<div id="projects" class="mt-8 mb-8 ml-8 text-left mr-16">
+<div id="projects" class="mt-8 mb-8 ml-4 md:ml-8 text-left mr-4 md:mr-16 px-4 md:px-0">
   <h2 class="text-2xl font-bold">
     Projects
   </h2>
   
-  <div class="ml-14 mt-8 mr-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+  <div class="ml-2 md:ml-14 mt-8 mr-2 md:mr-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
       <ProjectItem 
         title="Mood Predictor"
         subheading="AI application to predict your mood and recommend personalized music."
@@ -371,11 +407,11 @@
   </div>
 </div>
 
-<div id="resume" class="mt-8 mb-8 ml-8 text-left">
+<div id="resume" class="mt-8 mb-8 ml-4 md:ml-8 text-left px-4 md:px-0">
   <h2 class="text-2xl font-bold">
     Resume
   </h2>
-  <div class="flex items-center gap-4 ml-14 mt-8">
+  <div class="flex flex-col sm:flex-row items-center gap-4 ml-2 md:ml-14 mt-8">
     <button 
       on:click={viewResume}
       class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors border border-gray-300 hover:border-gray-400 font-medium min-w-[100px]">
@@ -391,11 +427,11 @@
   </div>
 </div>
 
-<div id="contact" class="mt-8 mb-8 ml-8 text-left">
+<div id="contact" class="mt-8 mb-8 ml-4 md:ml-8 text-left px-4 md:px-0">
   <h2 class="text-2xl font-bold">
     Contact
   </h2>
-  <div class="ml-14 mt-8 max-w-md">
+  <div class="ml-2 md:ml-14 mt-8 max-w-md">
     <form on:submit|preventDefault={sendEmail} class="space-y-4">
       <div>
         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
