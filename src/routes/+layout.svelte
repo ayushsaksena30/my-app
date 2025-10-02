@@ -2,7 +2,7 @@
     import '../app.css';
     import LeftPanel from '../lib/components/LeftPanel.svelte';
     import RightPanel from '../lib/components/RightPanel.svelte';
-
+    
     let isMenuOpen = false;
     const toggleMenu = () => {
         isMenuOpen = !isMenuOpen;
@@ -19,12 +19,12 @@
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50">
-    <div class="md:hidden sticky top-0 z-30 bg-white border-b border-gray-200">
+    <div class="md:hidden sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
         <div class="flex items-center justify-between px-4 py-3">
             <div class="flex items-center gap-2">
                 <img src="/images/logos/title.png" alt="Ayush Saksena" class="h-6 w-auto" />
             </div>
-            <button aria-label="Open menu" class="p-2 rounded-md border border-gray-300" on:click={toggleMenu}>
+            <button aria-label="Open menu" class="p-2 rounded-md border border-gray-300 hover:bg-gray-50 transition-colors" on:click={toggleMenu}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
                 </svg>
@@ -39,11 +39,11 @@
 
         {#if isMenuOpen}
         <div class="md:hidden fixed inset-0 z-40" aria-modal="true" role="dialog">
-            <button aria-label="Close menu overlay" class="absolute inset-0 bg-black/40" on:click={closeMenu}></button>
-            <div class="absolute left-0 top-0 bottom-0 w-4/5 max-w-xs bg-white shadow-xl overflow-y-auto">
-                <div class="flex items-center justify-between p-4 border-b border-gray-200">
-                    <span class="font-semibold">Menu</span>
-                    <button aria-label="Close menu" class="p-2 rounded-md border border-gray-300" on:click={closeMenu}>
+            <button aria-label="Close menu overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm" on:click={closeMenu}></button>
+            <div class="absolute left-0 top-0 bottom-0 w-4/5 max-w-xs bg-white shadow-2xl overflow-y-auto">
+                <div class="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
+                    <span class="font-semibold text-gray-900">Menu</span>
+                    <button aria-label="Close menu" class="p-2 rounded-md border border-gray-300 hover:bg-gray-100 transition-colors" on:click={closeMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>

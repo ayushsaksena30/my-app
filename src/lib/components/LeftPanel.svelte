@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="mb-8 pb-6 border-b border-gray-100">
-		<div class="grid grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-4 justify-items-center">
+		<div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 justify-items-center">
 			<a 
 				href="https://leetcode.com/ayushsaksena" 
 				target="_blank" 
@@ -32,7 +32,7 @@
 				class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors"
 			>
 				<img src="/images/icons/leetcode.svg" alt="LeetCode" class="w-4 h-4" />
-				<span class="text-md">LeetCode</span>
+				<span class="text-sm lg:text-md">LeetCode</span>
 			</a>
 			
 			<a 
@@ -42,7 +42,7 @@
 				class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors"
 			>
 				<img src="/images/icons/github.svg" alt="GitHub" class="w-4 h-4" />
-				<span class="text-sm">GitHub</span>
+				<span class="text-sm lg:text-md">GitHub</span>
 			</a>
 			
 			<a 
@@ -52,7 +52,7 @@
 				class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors"
 			>
 				<img src="/images/icons/linkedin.svg" alt="LinkedIn" class="w-4 h-4" />
-				<span class="text-md">LinkedIn</span>
+				<span class="text-sm lg:text-md">LinkedIn</span>
 			</a>
 
 			<a 
@@ -62,7 +62,7 @@
 				class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors"
 			>
 				<img src="/images/icons/discord.svg" alt="Discord" class="w-4 h-4" />
-				<span class="text-md">Discord</span>
+				<span class="text-sm lg:text-md">Discord</span>
 			</a>
 		</div>
 	</div>

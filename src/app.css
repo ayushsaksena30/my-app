@@ -13,3 +13,29 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-gap-2 {
+    gap: 0.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
