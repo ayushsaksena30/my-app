@@ -73,10 +73,12 @@
         <TechStackItem imgPath="/images/lang/go.png" name="Go" />
         <TechStackItem imgPath="/images/tools/git.svg" name="Git" />
       </div>
-      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Work-</span>
-      <div class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
-        <ul class="list-disc ml-4 md:ml-6">
-          <li>Working on the Breez SDK.</li>
+      <span class="text-md font-bold ml-14">Work-</span>
+      <div class="text-gray-700 text-md ml-14">
+        <ul class="list-disc ml-6 mr-32">
+          <li>Architected a modular plugin system, cutting core SDK complexity by 40% and improving maintainability.</li>
+          <li>Built a cross-platform Foreground Service (iOS/Kotlin) to wake the SDK for reliable, real-time processing of NWC events.</li>
+          <li>Developed server-side WebSocket logic to listen for NWC events and trigger push notifications to the client.</li>
         </ul>
       </div>
     </div>
