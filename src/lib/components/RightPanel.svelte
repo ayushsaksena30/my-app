@@ -3,12 +3,12 @@
   import TechStackItem from './TechStackItem.svelte';
 
   function viewResume() {
-    window.open('https://drive.google.com/file/d/1Xx-mq0_zkjb7-wB1dcTh0oK-IUbZqIsV/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1SvhC9ZSM5s_fDeP4L0Cu13FRKJJKHNPc/view?usp=sharing', '_blank');
   }
 
   function downloadResume() {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1Xx-mq0_zkjb7-wB1dcTh0oK-IUbZqIsV';
+    link.href = 'https://drive.usercontent.google.com/download?id=1SvhC9ZSM5s_fDeP4L0Cu13FRKJJKHNPc&export=download&authuser=0&confirm=t&uuid=d579d083-eecd-45ff-a89a-611b20b1384b&at=AKSUxGPJl6NpCrPvUVkgMiZQyZzq:1759402976867';
     link.download = 'Ayush_Saksena_Resume.pdf';
     document.body.appendChild(link);
     link.click();
