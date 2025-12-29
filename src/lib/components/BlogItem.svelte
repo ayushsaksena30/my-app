@@ -5,8 +5,8 @@
   export let thumbnail: string | null = null;
 </script>
 
-<div class="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 p-6">
-  <div class="flex flex-col">
+<div class="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 p-6 h-full flex flex-col">
+  <div class="flex flex-col flex-grow">
     {#if thumbnail}
       <img 
         src={thumbnail} 
@@ -15,14 +15,9 @@
       />
     {/if}
     <div>
-      <a 
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors block"
-      >
+      <h3 class="text-xl font-bold text-gray-900 mb-2">
         {title}
-      </a>
+      </h3>
       <div class="mt-2">
         <span class="text-xs text-gray-500">
           {new Date(pubDate).toLocaleDateString('en-US', { 
@@ -33,5 +28,17 @@
         </span>
       </div>
     </div>
+  </div>
+  
+  <div class="flex flex-wrap gap-2 pt-4 mt-auto">
+    <a 
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors border border-gray-300 hover:border-gray-400"
+    >
+      <img src="/images/logos/medium-icon.svg" alt="Medium" class="w-4 h-4" />
+      <span class="text-sm">Medium</span>
+    </a>
   </div>
 </div>
