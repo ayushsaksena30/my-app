@@ -1,6 +1,35 @@
-<script>
+<script lang="ts">
 	import ProjectItem from './ProjectItem.svelte';
   import TechStackItem from './TechStackItem.svelte';
+  import BlogItem from './BlogItem.svelte';
+  import { onMount } from 'svelte';
+
+  interface MediumItem {
+    title: string;
+    link: string;
+    pubDate: string;
+    thumbnail?: string;
+  }
+
+  let blogs: MediumItem[] = [];
+  let blogsLoading: boolean = true;
+  let blogsError: boolean = false;
+
+  onMount(async () => {
+    try {
+      const response = await fetch('/api/blogs');
+      if(response.ok) {
+        blogs = await response.json();
+      } else {
+        blogsError = true;
+      }
+    } catch (error) {
+      console.error('Error fetching blogs:', error);
+      blogsError = true;
+    } finally {
+      blogsLoading = false;
+    }
+  });
 
   function viewResume() {
     window.open('https://drive.google.com/file/d/1SvhC9ZSM5s_fDeP4L0Cu13FRKJJKHNPc/view?usp=sharing', '_blank');
@@ -408,6 +437,32 @@
       />
 
     </div>
+  </div>
+</div>
+
+<div id="blogs" class="mt-8 mb-8 ml-4 md:ml-8 text-left px-4 md:px-0">
+  <h2 class="text-2xl font-bold">
+    Blogs
+  </h2>
+  <div class="ml-2 md:ml-14 mt-8 mr-2 md:mr-8">
+    {#if blogsLoading}
+    <p class="text-gray-700 text-md">Loading blogs...</p>
+    {:else if blogsError}
+    <p class="text-red-700 text-md">Error loading blogs. Please try again later.</p>
+    {:else if blogs.length === 0}
+    <p class="text-gray-700 text-md">No blogs found.</p>
+    {:else}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+      {#each blogs as blog}
+        <BlogItem 
+          title={blog.title}
+          link={blog.link}
+          pubDate={blog.pubDate}
+          thumbnail={blog.thumbnail}
+        />
+      {/each}
+    </div>
+    {/if}
   </div>
 </div>
 
