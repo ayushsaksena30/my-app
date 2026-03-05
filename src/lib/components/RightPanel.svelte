@@ -47,13 +47,6 @@
   let name = '';
   let email = '';
   let message = '';
-
-  function sendEmail() {
-    const subject = `Contact from ${name}`;
-    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-    const mailtoLink = `mailto:asaksena100@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink, '_blank');
-  }
 </script>
 
 <div class="mt-16 md:mt-32"></div>
@@ -77,6 +70,44 @@
 
   <h3 class="text-gray-700 text-md mt-8">
     <div class="flex items-center gap-2">
+      <img src="/images/icons/ict.png" alt="Idom CAAS Technology" class="w-10 h-10 md:w-14 md:h-12 flex-shrink-0" />
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+        <span class="text-lg md:text-xl font-bold">
+          Idom CAAS Technology, Japan
+        </span>
+        <span class="text-md text-gray-700 whitespace-nowrap mr-32">Feb 2026 - Mar 2026</span>
+      </div>
+    </div>
+    <div class="flex flex-col items-start gap-2 mt-4">
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">SDE Intern</span>
+      <p class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
+        Worked on frontend improvements and machine learning experimentation using internal datasets.
+      </p>
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Tech Stack-</span>
+      <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
+        <TechStackItem imgPath="/images/lang/js.png" name="JavaScript" />
+        <TechStackItem imgPath="/images/lang/python.svg" name="Python" />
+        <TechStackItem imgPath="/images/lang/scikit-learn.png" name="Scikit-Learn" />
+        <TechStackItem imgPath="/images/lang/tensorflow.svg" name="TensorFlow" />
+        <TechStackItem imgPath="/images/lang/pandas.svg" name="Pandas" />
+        <TechStackItem imgPath="/images/lang/vue.svg" name="Vue" />
+        <TechStackItem imgPath="/images/tools/github.svg" name="Github" />
+        <TechStackItem imgPath="/images/tools/git.svg" name="Git" />
+      </div>
+      <span class="text-md font-bold ml-14">Work-</span>
+      <div class="text-gray-700 text-md ml-14">
+        <ul class="list-disc ml-6 mr-32">
+          <li>Resolved 110+ frontend issues, improving UI consistency, responsiveness and cross-device compatibility while aligning implementations with Figma designs.</li>
+          <li>Implemented responsive layouts, sticky headers and smoother loading/animations, enhancing usability across multiple web pages.</li>
+          <li>Developed machine learning models using Python, Pandas, Scikit-learn and TensorFlow achieving ROC-AUC 0.64</li>
+        </ul>
+      </div>
+    </div>
+
+  </h3>
+
+  <h3 class="text-gray-700 text-md mt-8">
+    <div class="flex items-center gap-2">
       <img src="/images/icons/breez-icon.png" alt="Breez" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
       <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
         <a 
@@ -86,11 +117,11 @@
         class="text-lg md:text-xl font-bold underline">
           Breez
         </a>
-        <span class="text-md text-gray-700 whitespace-nowrap mr-32">Sept 2025 - Present</span>
+        <span class="text-md text-gray-700 whitespace-nowrap mr-32">Sept 2025 - Jan 2026</span>
       </div>
     </div>
     <div class="flex flex-col items-start gap-2 mt-4">
-      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Rust Developer Intern</span>
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Junior Rust Developer</span>
       <p class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
         Worked on NWC Feature integration in the Breez SDK. 
       </p>
@@ -129,7 +160,7 @@
       </div>
     </div>
     <div class="flex flex-col items-start gap-2">
-      <span class="text-md font-bold ml-14">Software Engineer Intern @ Breez</span>
+      <span class="text-md font-bold ml-14">SDE Intern @ Breez</span>
       <p class="text-gray-700 text-md ml-14">
         Selected as one of 68 contributors out of 45000+ applicants globally.
       </p>
@@ -491,12 +522,17 @@
     Contact
   </h2>
   <div class="ml-2 md:ml-14 mt-8 max-w-md">
-    <form on:submit|preventDefault={sendEmail} class="space-y-4">
+    <form 
+      action="https://formspree.io/f/mkoqwyan" 
+      method="POST" 
+      class="space-y-4"
+    >
       <div>
         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
         <input
           type="text"
           id="name"
+          name="name"
           bind:value={name}
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -509,6 +545,7 @@
         <input
           type="email"
           id="email"
+          name="email"
           bind:value={email}
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -520,6 +557,7 @@
         <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
         <textarea
           id="message"
+          name="message"
           bind:value={message}
           required
           rows="4"
