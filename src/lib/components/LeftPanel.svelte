@@ -76,7 +76,7 @@
       <a href="#projects" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Projects</a>
       <a href="#blogs" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Blogs</a>
       <a href="#resume" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Resume</a>
-      <a href="#contact" on:click={handleNavigate} class="block text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Contact</a>
+      <a href="#contact" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Contact</a>
 		</nav>
 	</div>
 </div>
