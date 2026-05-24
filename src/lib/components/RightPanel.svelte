@@ -37,7 +37,7 @@
 
   function downloadResume() {
     const link = document.createElement('a');
-    link.href = 'https://drive.usercontent.google.com/download?id=1SvhC9ZSM5s_fDeP4L0Cu13FRKJJKHNPc&export=download&authuser=0&confirm=t&uuid=d579d083-eecd-45ff-a89a-611b20b1384b&at=AKSUxGPJl6NpCrPvUVkgMiZQyZzq:1759402976867';
+    link.href = 'https://drive.google.com/uc?export=download&id=1SvhC9ZSM5s_fDeP4L0Cu13FRKJJKHNPc';
     link.download = 'Ayush_Saksena_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -67,6 +67,30 @@
   <h2 class="text-2xl font-bold">
     Experience
   </h2>
+
+  <h3 class="text-gray-700 text-md mt-8">
+    <div class="flex items-center gap-2">
+      <img src="/images/icons/cisco.png" alt="Cisco" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 object-contain" />
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+        <span class="text-lg md:text-xl font-bold">
+          Cisco
+        </span>
+        <span class="text-md text-gray-700 whitespace-nowrap mr-32">May 2026 - Present</span>
+      </div>
+    </div>
+    <div class="flex flex-col items-start gap-2 mt-4">
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Technical Intern</span>
+      <p class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
+        Working on the Firewall team in the Security division.
+      </p>
+      <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Tech Stack-</span>
+      <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
+        <TechStackItem imgPath="/images/lang/c.png" name="C" />
+        <TechStackItem imgPath="/images/tools/git.svg" name="Git" />
+        <TechStackItem imgPath="/images/tools/github.svg" name="Github" />
+      </div>
+    </div>
+  </h3>
 
   <h3 class="text-gray-700 text-md mt-8">
     <div class="flex items-center gap-2">
@@ -280,6 +304,11 @@
     <TechStackItem imgPath="/images/lang/js.png" name="JavaScript" />
     <TechStackItem imgPath="/images/lang/go.png" name="Go" />
     <TechStackItem imgPath="/images/lang/wasm.svg" name="Web Assembly" />
+  </div>
+  <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">Systems Programming</h3>
+  <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
+    <TechStackItem imgPath="/images/lang/c.png" name="C" />
+    <TechStackItem imgPath="/images/lang/cpp.png" name="C++" />
   </div>
   <h3 class="text-sm md:text-md font-bold ml-2 md:ml-14 mt-8">AI/ML</h3>
   <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
