@@ -32,12 +32,12 @@
   });
 
   function viewResume() {
-    window.open('https://drive.google.com/file/d/1SvhC9ZSM5s_fDeP4L0Cu13FRKJJKHNPc/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/15bfiubJYndXvpBUuPlwJiOSQRODYQjHY/view?usp=sharing', '_blank');
   }
 
   function downloadResume() {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1SvhC9ZSM5s_fDeP4L0Cu13FRKJJKHNPc';
+    link.href = 'https://drive.google.com/uc?export=download&id=15bfiubJYndXvpBUuPlwJiOSQRODYQjHY';
     link.download = 'Ayush_Saksena_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -58,7 +58,7 @@
   <div class="flex items-center gap-2 mt-4">
     <img src="/images/icons/iiitdmj.jpg" alt="IIITDM Jabalpur" class="w-10 h-10 md:w-12 md:h-12 self-center flex-shrink-0" />
     <p class="text-gray-700 text-sm md:text-md">
-      I am Pre-Final year student at Indian Institute of Information Technology, Jabalpur.
+      I am Final year student at Indian Institute of Information Technology, Jabalpur.
     </p>
   </div>
 </div>
@@ -72,22 +72,35 @@
     <div class="flex items-center gap-2">
       <img src="/images/icons/cisco.png" alt="Cisco" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 object-contain" />
       <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
-        <span class="text-lg md:text-xl font-bold">
+        <a 
+        href="https://www.linkedin.com/company/cisco" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-lg md:text-xl font-bold underline">
           Cisco
-        </span>
+        </a>
         <span class="text-md text-gray-700 whitespace-nowrap mr-32">May 2026 - Present</span>
       </div>
     </div>
     <div class="flex flex-col items-start gap-2 mt-4">
       <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Technical Intern</span>
       <p class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
-        Working on the Firewall team in the Security division.
+        Worked on the Firewall team in the Security division, focusing on Cisco ASA VPN workflows.
       </p>
       <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Tech Stack-</span>
       <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
         <TechStackItem imgPath="/images/lang/c.png" name="C" />
+        <TechStackItem imgPath="/images/lang/python.svg" name="Python" />
         <TechStackItem imgPath="/images/tools/git.svg" name="Git" />
         <TechStackItem imgPath="/images/tools/github.svg" name="Github" />
+      </div>
+      <span class="text-md font-bold ml-14">Work-</span>
+      <div class="text-gray-700 text-md ml-14">
+        <ul class="list-disc ml-6 mr-32">
+          <li>Engineered an internal tooling solution for Cisco ASA VPN workflows, enabling functionality enhancements across 8 Site-to-Site and Remote Access VPN features.</li>
+          <li>Contributed to low-level VPN tunnel setup &amp; negotiation logic while navigating a large-scale networking codebase.</li>
+          <li>Designed and automated 25 feature and scaling test cases in Python after manual validation across 10 scenarios involving complex multi-device network setups.</li>
+        </ul>
       </div>
     </div>
   </h3>
@@ -174,7 +187,7 @@
       <img src="/images/icons/bitcoin.svg" alt="Bitcoin" class="w-12 h-12" />
       <div class="flex items-center justify-between w-full">
         <a 
-        href="http://summerofbitcoin.org/2025-accepted-projects" 
+        href="https://www.summerofbitcoin.org/program-details/2025/r/recAe9uPotfR3ofxL" 
         target="_blank" 
         rel="noopener noreferrer"
         class="text-xl font-bold underline">
@@ -346,6 +359,54 @@
   </div>
 </div>
 
+<div id="research-paper" class="mt-8 mb-8 ml-4 md:ml-8 text-left mr-4 md:mr-16 px-4 md:px-0">
+  <h2 class="text-2xl font-bold">
+    Research Paper
+  </h2>
+
+  <div class="ml-2 md:ml-14 mt-8 mr-2 md:mr-8">
+    <div class="grid grid-cols-1 lg:grid-cols-1 gap-4 md:gap-6">
+      <ProjectItem
+        title="Trust-minimized hybrid distributed training over untrusted networks"
+        subheading="Saksena, A., Kesav, A., Malpani, A., & Parihar, A. S. (Aug. 2026).
+        Trust-minimized hybrid distributed training over untrusted networks: Simulated verifiable coordination and adaptive trust management. Machine Learning, Springer, Impact Factor 4.9 (Under Review)."
+        features={[
+          "Distributed Systems Research (First Author) – Architecting a Byzantine Fault Tolerant DML framework utilizing dPKI, VRF-based validator consensus, and Krum/Commit-Reveal schemes for decentralized ML architectures.",
+          "Focused on simulated verifiable coordination and adaptive trust management for hybrid distributed training over untrusted networks.",
+          "Designed a resilient workflow for decentralized ML collaboration by combining consensus-driven validation with trust-aware coordination strategies."
+        ]}
+        status="in progress"
+      />
+    </div>
+  </div>
+</div>
+
+<div id="blogs" class="mt-8 mb-8 ml-4 md:ml-8 text-left px-4 md:px-0">
+  <h2 class="text-2xl font-bold">
+    Blogs
+  </h2>
+  <div class="ml-2 md:ml-14 mt-8 mr-2 md:mr-8">
+    {#if blogsLoading}
+    <p class="text-gray-700 text-md">Loading blogs...</p>
+    {:else if blogsError}
+    <p class="text-red-700 text-md">Error loading blogs. Please try again later.</p>
+    {:else if blogs.length === 0}
+    <p class="text-gray-700 text-md">No blogs found.</p>
+    {:else}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+      {#each blogs as blog}
+        <BlogItem 
+          title={blog.title}
+          link={blog.link}
+          pubDate={blog.pubDate}
+          thumbnail={blog.thumbnail}
+        />
+      {/each}
+    </div>
+    {/if}
+  </div>
+</div>
+
 <div id="projects" class="mt-8 mb-8 ml-4 md:ml-8 text-left mr-4 md:mr-16 px-4 md:px-0">
   <h2 class="text-2xl font-bold">
     Projects
@@ -418,27 +479,6 @@
       />
 
       <ProjectItem 
-        title="NotifyMe"
-        subheading="Cross Platform app for call and SMS notification forwarding."
-        features={[
-          "Automated bug detection and security vulnerability scanning",
-          "Code style and best practices suggestions",
-          "Integration with GitHub and GitLab",
-          "Custom rule configuration for teams"
-        ]}
-        techStack={[
-          {imgPath: "/images/lang/kotlin.png", name: "Kotlin"},
-          {imgPath: "/images/lang/compose.png", name: "Jetpack Compose"},
-          {imgPath: "/images/lang/flutter.svg", name: "Flutter"},
-          {imgPath: "/images/tools/studio.png", name: "Android Studio"},
-        ]}
-        links={[
-          {url: "http://github.com/ayushsaksena30/NotifyMe/", label: "GitHub", icon: "/images/tools/github.svg"}
-        ]}
-        status="in progress"
-      />
-
-      <ProjectItem 
         title="Portfolio Website"
         subheading="This website you are currently viewing."
         features={[
@@ -456,7 +496,7 @@
           {url: "http://github.com/ayushsaksena30/my-app", label: "GitHub", icon: "/images/tools/github.svg"},
           {url: "https://ayush-saksena.vercel.app", label: "Vercel", icon: "/images/tools/vercel.svg"}
         ]}
-        status="in progress"
+        status="completed"
       />
 
       <ProjectItem 
@@ -497,32 +537,6 @@
       />
 
     </div>
-  </div>
-</div>
-
-<div id="blogs" class="mt-8 mb-8 ml-4 md:ml-8 text-left px-4 md:px-0">
-  <h2 class="text-2xl font-bold">
-    Blogs
-  </h2>
-  <div class="ml-2 md:ml-14 mt-8 mr-2 md:mr-8">
-    {#if blogsLoading}
-    <p class="text-gray-700 text-md">Loading blogs...</p>
-    {:else if blogsError}
-    <p class="text-red-700 text-md">Error loading blogs. Please try again later.</p>
-    {:else if blogs.length === 0}
-    <p class="text-gray-700 text-md">No blogs found.</p>
-    {:else}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-      {#each blogs as blog}
-        <BlogItem 
-          title={blog.title}
-          link={blog.link}
-          pubDate={blog.pubDate}
-          thumbnail={blog.thumbnail}
-        />
-      {/each}
-    </div>
-    {/if}
   </div>
 </div>
 

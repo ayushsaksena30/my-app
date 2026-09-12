@@ -12,14 +12,14 @@
 		</div>
 		<h1 class="text-2xl font-bold text-gray-900 mb-2">Ayush Saksena</h1>
 		<p class="text-gray-600 text-md mb-2">Lucknow, India</p>
-    <a href="mailto:asaksena100@gmail.com" class="text-gray-600 text-md mb-2 underline hover:text-gray-900">
-      asaksena100@gmail.com
+    <a href="mailto:ayushsaksena.work@gmail.com" class="text-gray-600 text-md mb-2 underline hover:text-gray-900">
+      ayushsaksena.work@gmail.com
     </a>
 	</div>
 
 	<div class="mb-8 text-center">
 		<p class="text-gray-700 text-md leading-relaxed">
-			Hey, I am Software Developer with interest in Web3, Android, ML.
+			Hey, I am Software Developer with interest in <br />Distributed Systems and Web3.
 		</p>
 	</div>
 
@@ -73,6 +73,7 @@
       <a href="#about" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">About</a>
       <a href="#experience" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Experience</a>
       <a href="#tech-stack" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Tech Stack</a>
+      <a href="#research-paper" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Research Paper</a>
       <a href="#projects" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Projects</a>
       <a href="#blogs" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Blogs</a>
       <a href="#resume" on:click={handleNavigate} class="block text-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors">Resume</a>
