@@ -31,19 +31,6 @@
     }
   });
 
-  function viewResume() {
-    window.open('https://drive.google.com/file/d/15bfiubJYndXvpBUuPlwJiOSQRODYQjHY/view?usp=sharing', '_blank');
-  }
-
-  function downloadResume() {
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=15bfiubJYndXvpBUuPlwJiOSQRODYQjHY';
-    link.download = 'Ayush_Saksena_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
   let name = '';
   let email = '';
   let message = '';
@@ -97,9 +84,9 @@
       <span class="text-md font-bold ml-14">Work-</span>
       <div class="text-gray-700 text-md ml-14">
         <ul class="list-disc ml-6 mr-32">
-          <li>Engineered an internal tooling solution for Cisco ASA VPN workflows, enabling functionality enhancements across 8 Site-to-Site and Remote Access VPN features.</li>
-          <li>Contributed to low-level VPN tunnel setup &amp; negotiation logic while navigating a large-scale networking codebase.</li>
-          <li>Designed and automated 25 feature and scaling test cases in Python after manual validation across 10 scenarios involving complex multi-device network setups.</li>
+          <li>Engineered and shipped production-grade VPN tunnel setup &amp; negotiation logic in C, merged into Cisco ASA mainline codebase and deployed to millions of devices globally.</li>
+          <li>Contributed to 8 Site-to-Site and Remote Access VPN features, validating &lt;1% performance impact with thorough end-to-end testing.</li>
+          <li>Designed and automated 25 feature and scaling test cases in Python across 10 complex multi-device network setups.</li>
         </ul>
       </div>
     </div>
@@ -110,7 +97,7 @@
       <img src="/images/icons/ict.png" alt="Idom CAAS Technology" class="w-10 h-10 md:w-14 md:h-12 flex-shrink-0" />
       <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full">
         <span class="text-lg md:text-xl font-bold">
-          Idom CAAS Technology, Japan
+          IDOM CAAS Technology (Gulliver Group), Japan
         </span>
         <span class="text-md text-gray-700 whitespace-nowrap mr-32">Feb 2026 - Mar 2026</span>
       </div>
@@ -118,7 +105,7 @@
     <div class="flex flex-col items-start gap-2 mt-4">
       <span class="text-sm md:text-md font-bold ml-2 md:ml-14">SDE Intern</span>
       <p class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
-        Worked on frontend improvements and machine learning experimentation using internal datasets.
+        Worked on frontend improvements and machine learning experimentation using internal datasets to improve product experience and analytics.
       </p>
       <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Tech Stack-</span>
       <div class="flex flex-wrap items-center gap-2 md:gap-3 ml-2 md:ml-14 mt-2">
@@ -134,9 +121,10 @@
       <span class="text-md font-bold ml-14">Work-</span>
       <div class="text-gray-700 text-md ml-14">
         <ul class="list-disc ml-6 mr-32">
-          <li>Resolved 110+ frontend issues, improving UI consistency, responsiveness and cross-device compatibility while aligning implementations with Figma designs.</li>
-          <li>Implemented responsive layouts, sticky headers and smoother loading/animations, enhancing usability across multiple web pages.</li>
-          <li>Developed machine learning models using Python, Pandas, Scikit-learn and TensorFlow achieving ROC-AUC 0.64</li>
+          <li>Resolved 110+ frontend issues, improving UI consistency, responsiveness, and cross-device compatibility while aligning with Figma-based design specifications.</li>
+          <li>Implemented responsive layouts, sticky headers, and smoother loading/animation behaviors to improve usability across multiple web pages.</li>
+          <li>Built and evaluated machine learning models using Python, Pandas, Scikit-learn, and TensorFlow, achieving measurable performance
+benchmarks for vehicle pricing workflows.</li>
         </ul>
       </div>
     </div>
@@ -212,9 +200,9 @@
       <span class="text-md font-bold ml-14">Work-</span>
       <div class="text-gray-700 text-md ml-14">
         <ul class="list-disc ml-6">
-          <li>Developed optional, modular bridge implementation for Nostr Wallet Connect and Breez SDK.</li>
-          <li>Made demo website for the bridge implementation.</li>
-          <li>Wrote comprehensive documentation for the project.</li>
+          <li>Built and shipped a modular Nostr Wallet Connect bridge enabling Lightning, Bitcoin, and Liquid payments through the Breez SDK, supporting secure WebSocket communication and multiple payment formats like BOLT11 and BIP21, deployed to all Breez users in production.</li>
+          <li>Implemented optional modular bridge using Rust’s feature flags and trait-based design, making it reusable, testable, and compatible with self-custodial wallet workflows.</li>
+          <li>Engineered an event-driven payment system processing requests via Nostr relays with invoice generation, user consent flow, and replay protection, demonstrated via live demo website.</li>
         </ul>
       </div>
     </div>
@@ -545,18 +533,22 @@
     Resume
   </h2>
   <div class="flex flex-col sm:flex-row items-center gap-4 ml-2 md:ml-14 mt-8">
-    <button 
-      on:click={viewResume}
+    <a
+      href="https://drive.google.com/file/d/15bfiubJYndXvpBUuPlwJiOSQRODYQjHY/preview"
+      target="_blank"
+      rel="noopener noreferrer"
       class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors border border-gray-300 hover:border-gray-400 font-medium min-w-[100px]">
       <img src="/images/icons/view.svg" alt="View" class="w-4 h-4" />
       View
-    </button>
-    <button 
-      on:click={downloadResume}
+    </a>
+    <a
+      href="https://drive.google.com/uc?export=download&id=15bfiubJYndXvpBUuPlwJiOSQRODYQjHY"
+      target="_blank"
+      rel="noopener noreferrer"
       class="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 p-2 rounded-md transition-colors border border-gray-300 hover:border-gray-400 font-medium min-w-[100px]">
       <img src="/images/icons/download.svg" alt="Download" class="w-4 h-4" />
       Download
-    </button>
+    </a>
   </div>
 </div>
 
