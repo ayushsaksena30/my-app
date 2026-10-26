@@ -2,6 +2,7 @@
     import '../app.css';
     import LeftPanel from '../lib/components/LeftPanel.svelte';
     import RightPanel from '../lib/components/RightPanel.svelte';
+    import Gallery from '../lib/components/Gallery.svelte';
     
     let isMenuOpen = false;
     const toggleMenu = () => {
@@ -60,3 +61,4 @@
     </div>
     <slot />
 </div>
+<Gallery />

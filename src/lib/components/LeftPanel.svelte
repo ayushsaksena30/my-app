@@ -8,7 +8,7 @@
 <div class="p-8">
 	<div class="mb-6 text-center">
 		<div class="w-20 h-20 mx-auto mb-4">
-			<img src="/images/logos/logo.jpg" alt="Ayush Saksena" class="w-full h-full rounded-full object-cover" />
+			<img src="/images/logos/logo2.jpeg" alt="Ayush Saksena" class="w-full h-full rounded-full object-cover" />
 		</div>
 		<h1 class="text-2xl font-bold text-gray-900 mb-2">Ayush Saksena</h1>
 		<p class="text-gray-600 text-md mb-2">Lucknow, India</p>

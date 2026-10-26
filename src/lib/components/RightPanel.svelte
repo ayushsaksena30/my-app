@@ -69,6 +69,7 @@
         <span class="text-md text-gray-700 whitespace-nowrap mr-32">May 2026 - Present</span>
       </div>
     </div>
+
     <div class="flex flex-col items-start gap-2 mt-4">
       <span class="text-sm md:text-md font-bold ml-2 md:ml-14">Technical Intern</span>
       <p class="text-gray-700 text-sm md:text-md ml-2 md:ml-14">
