@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 
+	export let mobile = false;
+
 	interface GalleryItem {
 		filename: string;
 		type: 'image' | 'video';
@@ -103,11 +105,13 @@
 
 <button
 	type="button"
-	class="fixed right-5 top-5 z-40 inline-flex items-center gap-2 rounded-2xl border border-gray-200/80 bg-white/85 px-4 py-2.5 text-sm font-medium text-gray-800 shadow-lg shadow-black/5 backdrop-blur-md transition hover:bg-white hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700 md:right-8 md:top-8"
+	class={mobile
+		? 'inline-flex items-center justify-center gap-1.5 rounded-xl border border-gray-200/80 bg-white/85 px-2 py-1 text-[10px] font-medium text-gray-800 shadow-md shadow-black/5 backdrop-blur-md transition hover:bg-white hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700 sm:gap-2 sm:px-2.5 sm:py-1.5 sm:text-xs'
+		: 'fixed right-5 top-5 z-40 inline-flex items-center gap-2 rounded-2xl border border-gray-200/80 bg-white/85 px-4 py-2.5 text-sm font-medium text-gray-800 shadow-lg shadow-black/5 backdrop-blur-md transition hover:bg-white hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700 md:right-8 md:top-8'}
 	aria-label="Open photo wall"
 	on:click={openWall}
 >
-	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="h-4 w-4">
+	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="h-4 w-4 shrink-0">
 		<path
 			stroke-linecap="round"
 			stroke-linejoin="round"
@@ -116,7 +120,7 @@
 		<circle cx="9" cy="10" r="1.25" />
 		<path stroke-linecap="round" stroke-linejoin="round" d="m5 17 4.5-4 3 2.5 2.5-2 4 3" />
 	</svg>
-	Random moments
+	<span class="inline whitespace-nowrap">Random moments</span>
 </button>
 
 <div

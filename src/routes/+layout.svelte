@@ -20,16 +20,21 @@
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50">
-    <div class="md:hidden sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
-        <div class="flex items-center justify-between px-4 py-3">
-            <div class="flex items-center gap-2">
-                <img src="/images/logos/title.png" alt="Ayush Saksena" class="h-6 w-auto" />
-            </div>
-            <button aria-label="Open menu" class="p-2 rounded-md border border-gray-300 hover:bg-gray-50 transition-colors" on:click={toggleMenu}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <div class="md:hidden sticky top-0 z-30 border-b border-gray-200 bg-white shadow-sm">
+        <div class="flex w-full items-center justify-between gap-2 px-3 py-3">
+            <button aria-label="Open menu" class="flex h-10 w-10 items-center justify-center rounded-md border border-gray-300 transition-colors hover:bg-gray-50" on:click={toggleMenu}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
                 </svg>
             </button>
+
+            <div class="flex flex-1 justify-center">
+                <Gallery mobile />
+            </div>
+
+            <div class="flex items-center justify-end">
+                <img src="/images/logos/title.png" alt="Ayush Saksena" class="h-6 w-auto" />
+            </div>
         </div>
     </div>
 
@@ -61,4 +66,6 @@
     </div>
     <slot />
 </div>
-<Gallery />
+<div class="hidden md:block">
+    <Gallery />
+</div>
